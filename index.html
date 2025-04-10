@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover the perfect blend of warmth and comfort at Brew Haven. Enjoy freshly brewed coffee, delicious pastries, and a cozy atmosphere that feels like home. Visit us for a taste of happiness in every cup."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_c/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_c/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="favicon_c/favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon_c/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon_c/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Brew Haven</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Code by Kaveesha Nethmal -->
+  </head>
+  <body>
+    <div class="header">
+      <div class="title-name">
+        <img src="assets/logo.png" alt="brew haven logo" />
+        <h1>Brew Haven</h1>
+      </div>
+      <nav class="header-nav">
+        <ul id="nav-header">
+          <li><a href="#" class="active-nav">Home</a></li>
+          <li><a href="#cards-section">About</a></li>
+          <li><a href="#menu-area">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Visit</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li class="close-button"><button id="close-btn" onclick="closeNav()">Close navigation</button></li>
+        </ul>
+      </nav>
+      <div class="reserve">
+        <a href="#">Reserve a Table</a>
+      </div>
+      <label for="check" class="menuButton">
+        <input id="check" type="checkbox">
+        <span class="top"></span>
+        <span class="mid"></span>
+        <span class="bot"></span>
+    </label>
+    </div>
+    <main>
+      <div class="hero-section">
+        <div class="hero-img-wrapper">
+          <img src="assets/cafe_h2.jpg" alt="coffee shop image" />
+        </div>
+        <div class="hero-text">
+          <div class="title-bh">
+            <h1>Awaken Your Senses at Brew Haven</h1>
+            <h3>A sanctuary for dreamers, thinkers, and coffee lovers.</h3>
+          </div>
+          <div class="cta-section">
+            <button id="view-menu" class="dynamic-btn" onclick="scrollToElementById('full-menu')">
+              <span>Discover our Menu</span><span>Menu</span>
+            </button>
+            <button id="visit-us" class="dynamic-btn">
+              <span>Visit Us Today</span><span>Come</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section" id="cards-section">
+        <div class="sub-section-text">
+          <div class="sub-card sub-card-animated-1">
+            <h2>Our Story</h2>
+            <p class="sub-card-sub-title">Where passion meets the pour.</p>
+            <p class="sub-description">
+              Brew Haven was born out of a simple idea—create a space where
+              modern aesthetics meet timeless comfort. A place to pause, sip,
+              and savor life.
+            </p>
+          </div>
+          <div class="sub-card">
+            <h2>The Vibe</h2>
+            <p class="sub-card-sub-title">Warm tones. Quiet joy.</p>
+            <p class="sub-description">
+              Every detail at Brew Haven is designed to soothe—from the natural
+              textures to the curated playlists echoing soft jazz and lo-fi.
+            </p>
+          </div>
+          <div class="sub-card sub-card-animated-2">
+            <h2>Our Coffee Philosophy</h2>
+            <p class="sub-card-sub-title">Craft. Care. Community.</p>
+            <p class="sub-description">
+              We source ethically, roast passionately, and brew with precision.
+              Because you deserve more than just “a coffee.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section" id="poetic-section">
+        <div class="text-section">
+          <p class="typing-text">
+            The scent of roasted dreams,<br />
+            cinnamon, vanilla, memory. <br />
+            Velvet tones curl in the air, <br />
+            jazz and laughter melting into morning. <br />
+            Your fingers trace the rim of the cup <br />
+            it feels like home. <br />
+            Maybe it is.
+          </p>
+        </div>
+        <div class="image-coffee">
+          <img src="assets/coffee_img_v1.jpeg" alt="" />
+        </div>
+      </div>
+
+      <div class="sub-section" id="trending-menu-section">
+        <h1 class="trending-title">Trending drinks</h1>
+        <div id="scrollBox" class="scroll-container">
+          <div id="scrollContent" class="scroll-content">
+            <div class="menu-item">
+              <div class="img-wrapper">
+                <img src="assets/Cappuccino.jpg" alt="image of a Cappuccino" />
+              </div>
+              <div class="text-wrapper">
+                <h2 class="drink-name">Cappuccino</h2>
+                <p class="drink-description">
+                  A timeless classic that balances bold espresso with creamy
+                  steamed milk and a frothy layer of foam. The cappuccino offers
+                  a rich coffee flavor with a light, airy texture, perfect for
+                  those who enjoy a well-rounded and satisfying coffee
+                  experience.
+                </p>
+                <p class="drink-price">Price : <span>$3.75</span></p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="img-wrapper">
+                <img src="assets/latte.jpeg" alt="image of a Latte" />
+              </div>
+              <div class="text-wrapper">
+                <h2 class="drink-name">Latte</h2>
+                <p class="drink-description">
+                  A creamy, smooth espresso-based drink made with steamed milk
+                  and just a touch of foam on top. The latte’s mild flavor and
+                  velvety texture make it a favorite for coffee lovers of all
+                  kinds. Customize it with your choice of syrups like vanilla,
+                  caramel, or hazelnut for a personalized twist.
+                </p>
+                <p class="drink-price">Price : <span>$4.00</span></p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="img-wrapper">
+                <img src="assets/Americano.jpeg" alt="image of a Americano" />
+              </div>
+              <div class="text-wrapper">
+                <h2 class="drink-name">Americano</h2>
+                <p class="drink-description">
+                  For those who appreciate the pure essence of espresso, the
+                  Americano is a simple yet flavorful drink made by diluting
+                  espresso with hot water. It’s smooth, mellow, and offers a
+                  lighter version of traditional espresso, making it ideal for
+                  any time of the day.
+                </p>
+                <p class="drink-price">Price : <span>$3.00</span></p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="img-wrapper">
+                <img src="assets/Mocha.webp" alt="image of a Mocha" />
+              </div>
+              <div class="text-wrapper">
+                <h2 class="drink-name">Mocha</h2>
+                <p class="drink-description">
+                  Indulge in the sweet and satisfying combination of rich
+                  espresso, smooth steamed milk, and chocolate syrup, topped
+                  with a delicate layer of foam. The mocha is the perfect choice
+                  for those who crave both the deep flavors of coffee and the
+                  sweet comfort of chocolate.
+                </p>
+                <p class="drink-price">Price : <span>$4.50</span></p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="img-wrapper">
+                <img src="assets/IcedLatte.jpg" alt="image of a Iced Latte" />
+              </div>
+              <div class="text-wrapper">
+                <h2 class="drink-name">Iced Latte</h2>
+                <p class="drink-description">
+                  A refreshing twist on the classic latte, served cold with
+                  chilled milk and espresso over ice. The iced latte is perfect
+                  for a cool, creamy treat on a warm day, offering the same
+                  smooth and balanced flavor of a traditional latte with a
+                  refreshing chill.
+                </p>
+                <p class="drink-price">Price : <span>$4.25</span></p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="img-wrapper">
+                <img src="assets/ColdBrew.jpg" alt="image of a Cold Brew" />
+              </div>
+              <div class="text-wrapper">
+                <h2 class="drink-name">Cold Brew</h2>
+                <p class="drink-description">
+                  Slow-steeped for 12 hours to bring out the full, smooth flavor
+                  with minimal acidity, cold brew is the perfect drink for those
+                  who enjoy a mellow, rich coffee flavor. Its smoothness and
+                  naturally sweet taste make it a favorite among coffee
+                  aficionados looking for a refreshing cold drink.
+                </p>
+                <p class="drink-price">Price : <span>$4.50</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section" id="menu-area">
+        <div class="menu-section" id="full-menu">
+          <h2>Coffee Menu</h2>
+
+          <h3>Espresso Bar</h3>
+          <table class="menu-table">
+            <tr>
+              <th>Coffee</th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Espresso</td>
+              <td>Classic, rich, and intense</td>
+              <td>$3.00</td>
+            </tr>
+            <tr>
+              <td>Americano</td>
+              <td>Espresso with hot water</td>
+              <td>$3.50</td>
+            </tr>
+            <tr>
+              <td>Macchiato</td>
+              <td>Espresso with a dollop of foam</td>
+              <td>$3.75</td>
+            </tr>
+          </table>
+
+          <h3>Signature Lattes</h3>
+          <table class="menu-table">
+            <tr>
+              <th>Coffee</th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Maple Vanilla Latte</td>
+              <td>Sweet maple, creamy vanilla</td>
+              <td>$4.75</td>
+            </tr>
+            <tr>
+              <td>Chai Oat Cappuccino</td>
+              <td>Warm chai spices & oat milk</td>
+              <td>$4.50</td>
+            </tr>
+            <tr>
+              <td>Hazelnut Mocha</td>
+              <td>Chocolate, hazelnut, and espresso</td>
+              <td>$4.95</td>
+            </tr>
+          </table>
+
+          <h3>Cold Brews</h3>
+          <table class="menu-table">
+            <tr>
+              <th>Coffee</th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Classic Cold Brew</td>
+              <td>Bold, smooth, all-day energy</td>
+              <td>$4.00</td>
+            </tr>
+            <tr>
+              <td>Cold Brew Elixir</td>
+              <td>Infused with citrus and mint</td>
+              <td>$4.50</td>
+            </tr>
+            <tr>
+              <td>Salted Caramel Cream</td>
+              <td>Cold brew topped with sweet foam</td>
+              <td>$4.75</td>
+            </tr>
+          </table>
+
+          <h3>Non-Coffee Faves</h3>
+          <table class="menu-table">
+            <tr>
+              <th>Drink</th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Matcha Latte</td>
+              <td>Earthy and energizing</td>
+              <td>$4.25</td>
+            </tr>
+            <tr>
+              <td>Golden Milk</td>
+              <td>Turmeric, cinnamon, and honey</td>
+              <td>$4.00</td>
+            </tr>
+            <tr>
+              <td>Hot Chocolate</td>
+              <td>Rich, creamy cocoa bliss</td>
+              <td>$3.50</td>
+            </tr>
+          </table>
+
+          <h3>Fresh Bakes</h3>
+          <table class="menu-table">
+            <tr>
+              <th>Item</th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Croissant</td>
+              <td>Buttery, flaky, fresh daily</td>
+              <td>$2.75</td>
+            </tr>
+            <tr>
+              <td>Blueberry Muffin</td>
+              <td>Soft, moist, real blueberries</td>
+              <td>$3.00</td>
+            </tr>
+            <tr>
+              <td>Vegan Banana Bread</td>
+              <td>Warm-spiced & naturally sweet</td>
+              <td>$3.25</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="coffee-footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h4>Brew Haven</h4>
+          <p>425 Bean Street<br />Portland, OR 97205<br />United States</p>
+          <p>Email: hello@brewhaven.com</p>
+          <p>Phone: (503) 555-8427</p>
+        </div>
+
+        <div class="footer-social">
+          <h4>Connect with us</h4>
+          <ul class="social-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">X (Twitter)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Brew Haven. Handcrafted with care.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

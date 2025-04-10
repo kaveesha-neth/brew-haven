@@ -1,0 +1,737 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #281c19;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  color: white;
+  height: 100%;
+}
+
+.header {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  z-index: 200;
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 20%, transparent 100%);
+}
+
+.title-name {
+  display: flex;
+  align-items: center;
+}
+
+.title-name img {
+  height: 50px;
+  margin-left: 20px;
+}
+
+.title-name h1 {
+  font-family: "Playfair Display", serif;
+  padding: 20px;
+  width: max-content;
+}
+
+.header {
+  padding-right: 20px;
+}
+
+.header-nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+
+.header-nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  border: solid rgba(122, 122, 122, 0) 1px;
+  transition: all ease-in-out 0.3s;
+}
+
+.header-nav ul li a:hover {
+  border: solid rgb(255, 255, 255) 1px;
+}
+
+.active-nav {
+  box-shadow: white 0 0 3px;
+}
+
+.close-button {
+  width: 100%;
+  display: flex;
+  display: none;
+}
+
+.close-button button {
+  outline: none;
+  border: none;
+  background-color: rgb(155, 2, 2);
+  padding: 8px 16px;
+  font-size: 12px;
+  color: white;
+  border-radius: 10px;
+  transition: all ease-in-out 0.2s;
+}
+
+.close-button button:active {
+  transform: scale(95%);
+}
+
+.reserve {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.reserve a {
+  text-decoration: none;
+  color: #281c19;
+  padding: 8px 16px;
+  background-color: white;
+  cursor: pointer;
+  border: solid #00000000 1px;
+  transition: all ease-in-out 0.3s;
+}
+
+.reserve a:hover {
+  color: white;
+  background-color: #281c19;
+  border: solid white 1px;
+}
+
+.menuButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 13%;
+  color: #ffffff;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 0.5em;
+  background: #621900;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: all 0.3s;
+  display: none;
+}
+
+.menuButton:hover {
+  border: 1px solid white;
+}
+
+.menuButton:active {
+  color: #666;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.menuButton span {
+  width: 30px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 100px;
+  transition: 0.3s ease;
+}
+
+input[type]:checked ~ span.top {
+  transform: translateY(290%) rotate(45deg);
+  width: 40px;
+}
+
+input[type]:checked ~ span.bot {
+  transform: translateY(-270%) rotate(-45deg);
+  width: 40px;
+}
+
+input[type]:checked ~ span.mid {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-img-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.31) 30%,
+    transparent 75%
+  );
+  background-color: #00000095;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text .title-bh {
+  color: white;
+  margin-left: 50px;
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+.hero-text .title-bh h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.hero-text .title-bh h3 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cta-section {
+  margin-left: 50px;
+  padding: 30px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.dynamic-btn {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f4f4f4;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #ffffff00;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.dynamic-btn span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.dynamic-btn span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.dynamic-btn:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #281c19;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.dynamic-btn:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.dynamic-btn:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+#cards-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#trending-menu-section {
+  height: 100%;
+}
+
+#cards-section {
+  background-image: url(assets/cafe_h1.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sub-section .sub-section-text {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.sub-card {
+  max-width: 250px;
+  min-height: 370px;
+  padding: 20px;
+  margin: 0 30px;
+  border: solid #a22000 1px;
+  background-color: #ffffff09;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+.sub-card:hover {
+  transform: scale(102%);
+  background-color: #00000092;
+}
+
+.sub-card:first-of-type {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.sub-card:last-of-type {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.sub-card.cardanimate {
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+.sub-card h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fe7654;
+}
+
+.sub-card .sub-card-sub-title {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sub-description {
+  text-align: justify;
+}
+
+.highlight-menu-list {
+  margin: 10px;
+}
+
+.highlight-menu-list li {
+  margin: 10px 0;
+}
+
+#checkout-menu {
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  border: solid rgba(255, 255, 255, 0.418) 1px;
+  transition: all ease-in-out 0.3s;
+}
+
+#checkout-menu:hover {
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  border: solid white 1px;
+}
+
+#poetic-section {
+  display: flex;
+  height: 100vh;
+}
+
+#poetic-section .text-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#poetic-section .text-section p {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  line-height: 60px;
+  margin-left: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.typing-text.animate {
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#poetic-section .image-coffee {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.image-coffee.imganimate {
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#poetic-section .image-coffee img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease-in-out 0.3s;
+}
+
+.trending-title {
+  margin: 40px 30px;
+  font-size: 40px;
+}
+
+.scroll-container {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.scroll-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  width: 90%;
+}
+
+.menu-item {
+  max-width: 300px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item .img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-item .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.menu-item .text-wrapper {
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+.menu-item .text-wrapper .drink-name {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.menu-item .text-wrapper .drink-description {
+  width: auto;
+  text-align: center;
+}
+
+.drink-price {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.menu-section {
+  padding: 60px 30px;
+  background-color: transparent;
+  color: #ffd5c1;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #a86c4b;
+}
+
+.menu-section h3 {
+  margin-top: 40px;
+  color: #bc998a;
+  border-bottom: 1px solid #d8c1b1;
+  padding-bottom: 5px;
+}
+
+.menu-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.menu-table th,
+.menu-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0d2c5;
+}
+
+.menu-table th {
+  background-color: #ebe1d8;
+  color: #3e2c23;
+}
+
+.coffee-footer {
+  background-color: #3e2c23;
+  color: #f7f3ef;
+  padding: 40px 20px 20px;
+  font-family: "Poppins", sans-serif;
+  z-index: 200;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info,
+.footer-social {
+  flex: 1 1 300px;
+}
+
+.footer-info h4,
+.footer-social h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #f1caa9;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  margin-bottom: 8px;
+}
+
+.social-links a {
+  color: #f7f3ef;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #d8a77d;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #d4b7a3;
+}
+
+@media only screen and (max-width: 1060px) {
+  .header {
+    justify-content: center;
+  }
+
+  .reserve {
+    margin-top: 20px;
+    display: none;
+  }
+
+  #cards-section {
+    height: auto;
+  }
+
+  .sub-section .sub-section-text {
+    padding: 30px 0;
+  }
+
+  .sub-card {
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .header-nav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    background-color: white;
+    padding: 20px 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateX(-1000px);
+    transition: all ease-in-out 0.5s;
+  }
+
+  .header-nav ul li {
+    width: 50%;
+  }
+
+  .header-nav ul li a {
+    display: inline-block;
+    color: #3e2c23;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 20px;
+    width: 100%;
+    border: solid rgba(122, 122, 122, 0.786) 1px;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .header-nav ul li a:active,
+  .header-nav ul li a:hover {
+    background-color: #3e2c23;
+    color: white;
+  }
+
+  .close-button {
+    display: flex;
+  }
+
+  .menuButton {
+    display: flex;
+    z-index: 500;
+  }
+
+  .hero-text .title-bh h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 800;
+  }
+
+  #poetic-section {
+    display: block;
+    height: auto;
+  }
+
+  #poetic-section .text-section {
+    height: 500px;
+  }
+
+  #poetic-section .text-section p {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #poetic-section .image-coffee {
+    height: 350px;
+  }
+
+}
+
+/* Code by Kaveesha Nethmal */
