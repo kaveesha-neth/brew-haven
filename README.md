@@ -3,7 +3,7 @@
 Welcome to **Brew Haven** — a cozy, minimalist coffee shop website designed to evoke warmth and comfort, just like your favorite cup of coffee.
 
 ## 🌐 Live Preview
-Check it out here: [Brew Haven Website](https://brewhaven.com)
+Check it out here: [Brew Haven Website](https://kaveesha-neth.github.io/brew-haven/)
 
 ## 📌 Features
 - Warm, calming color palette to reflect the cozy atmosphere of a real coffee shop
@@ -15,6 +15,12 @@ Check it out here: [Brew Haven Website](https://brewhaven.com)
 - HTML5
 - CSS3 
 - JavaScript
+
+## 📷 Screenshots
+
+<p align="center">
+  <img src="screenshots/Screenshot_Brew_Haven_1.png" alt="Screenshot" width="400"/>
+</p>
 
 
 ## 🚀 Getting Started
