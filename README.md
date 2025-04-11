@@ -21,7 +21,7 @@ Check it out here: [Brew Haven Website](https://brewhaven.com)
 To run the website locally:
 
 1. Clone this repo:  
-   `git clone https://github.com/yourusername/brew-haven.git`
+   `git clone https://github.com/kaveesha-neth/brew-haven.git`
 2. Open `index.html` in your browser.
 
 ## 🤝 Contributing
