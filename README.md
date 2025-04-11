@@ -18,9 +18,7 @@ Check it out here: [Brew Haven Website](https://kaveesha-neth.github.io/brew-hav
 
 ## 📷 Screenshots
 
-<p align="center">
-  <img src="screenshots/Screenshot_Brew_Haven_1.png" alt="Screenshot" width="400"/>
-</p>
+![Screenshot](screenshots/Screenshot_Brew_Haven_1.png)
 
 
 ## 🚀 Getting Started
