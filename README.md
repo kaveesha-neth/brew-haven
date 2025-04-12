@@ -22,13 +22,6 @@ Check it out here: [Brew Haven Website](https://kaveesha-neth.github.io/brew-hav
 ![Screenshot](screenshots/Screenshot_Brew_Haven_2.png)
 
 
-## 🚀 Getting Started
-To run the website locally:
-
-1. Clone this repo:  
-   `git clone https://github.com/kaveesha-neth/brew-haven.git`
-2. Open `index.html` in your browser.
-
 ## 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
 
